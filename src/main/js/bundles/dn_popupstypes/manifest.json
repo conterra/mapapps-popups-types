@@ -1,0 +1,29 @@
+{
+    "name": "dn_popupstypes",
+    "version": "1.0.0-SNAPSHOT",
+    "title": "${bundleName}",
+    "description": "${bundleDescription}",
+    "vendor": "con terra GmbH",
+    "keywords": [
+        "popups"
+    ],
+    "dependencies": {
+        "popups": "^4.4.0"
+    },
+    "components": [
+        {
+            "name": "Config",
+            "impl": "./PopupsFactory",
+            "provides": [
+                "popups.PopupDefinitionFactory"
+            ],
+            "componentFactory": true,
+            "instanceFactory": true,
+            "properties": {
+                "type": "",
+                "template": {}
+            },
+            "references": []
+        }
+    ]
+}
