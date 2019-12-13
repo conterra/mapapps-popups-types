@@ -15,5 +15,5 @@
  */
 module.exports = {
     bundleName: "Popups Types",
-    bundleDescription: "Das Popup Types Bundle erm\u00f6glicht es, Popup Templates an zentraler Stelle zu konfigurieren und h\u00e4ufiger wiederzuverwenden."
+    bundleDescription: "Das Popups Types Bundle erm\u00f6glicht es, Popup Templates an zentraler Stelle zu konfigurieren und h\u00e4ufiger wiederzuverwenden."
 };

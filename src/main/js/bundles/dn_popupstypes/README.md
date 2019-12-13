@@ -1,6 +1,6 @@
 # dn_popupstypes
 
-The Popup Types bundle allows to configure popup templates in a central place and to reuse them more often.
+The Popups Types bundle allows to configure popup templates in a central place and to reuse them more often.
 
 ## Usage
 **Requirement: map.apps 4.4.0**

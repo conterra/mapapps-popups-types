@@ -16,7 +16,7 @@
 module.exports = {
     root: ({
         bundleName: "Popups Types",
-        bundleDescription: "The Time Slider bundle allows to configure popup templates in a central place and to reuse them more often."
+        bundleDescription: "The Popups Types bundle allows to configure popup templates in a central place and to reuse them more often."
     }),
     "de": true
 };

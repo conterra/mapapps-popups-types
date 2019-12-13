@@ -1,5 +1,5 @@
 # Popups Types Bundle
-The Popup Types bundle allows to configure popup templates in a central place and to reuse them more often.
+The Popups Types bundle allows to configure popup templates in a central place and to reuse them more often.
 
 ## Sample App
 https://demos.conterra.de/mapapps/resources/apps/downloads_popupstypes/index.html
