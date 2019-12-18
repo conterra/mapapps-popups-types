@@ -13,23 +13,11 @@
  * See the License for the specific language governing permissions and
  * limitations under the License.
  */
-import PopupDefinition from "./PopupDefinition";
+import PopupDefinitionFactory from "./PopupDefinitionFactory";
 
 export default class PopupsFactory {
     createInstance() {
         const props = this._properties;
-        return {
-            getTypes() {
-                return [props.type];
-            },
-            createPopupDefinition(type) {
-                switch (type) {
-                    case props.type:
-                        return new PopupDefinition(props.template);
-                    default:
-                        throw new Error("unsupported type");
-                }
-            }
-        }
+        return new PopupDefinitionFactory(props);
     }
 }
