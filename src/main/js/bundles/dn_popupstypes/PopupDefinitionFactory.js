@@ -27,11 +27,9 @@ export default class PopupDefinitionFactory {
     }
 
     createPopupDefinition(type) {
-        switch (type) {
-            case this._type:
-                return new PopupDefinition(this._template);
-            default:
-                throw new Error("unsupported type");
+        if (type !== this._type) {
+            throw new Error(`unsupported type ${type}`);
         }
+        return new PopupDefinition(this._template);
     }
 }
