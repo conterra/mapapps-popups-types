@@ -27,6 +27,7 @@ The Popups Types bundle allows to configure popup templates in a central place a
 ## Configuration Reference
 
 ### Config
+Configure your own popupTemplates in the Config component.
 
 #### Sample configuration
 ```json
@@ -128,6 +129,58 @@ The Popups Types bundle allows to configure popup templates in a central place a
         }
     }
 ]
+```
+
+### DomainPopupsFactory
+You can add your own popupTemplates to the manifest.json of this bundle. These templates no longer need to be configured in the app, but are available in the app when the bundle is loaded.
+To achieve this, you must perform the following steps:
+
+1. Unzip the zip file in the [release](https://github.com/conterra/mapapps-popups-types/releases/latest)
+2. Change the configuration of the DomainPopupsFactory in the manifest.json.
+3. Zip the bundle and upload it.
+
+#### Sample configuration
+```json
+{
+    "name": "DomainPopupsFactory",
+    "properties": {
+        "popupTemplates": [
+            {
+                "type": "koeln",
+                "template": {
+                    "title": "{NAME}",
+                    "content": [
+                        {
+                            "type": "fields",
+                            "fieldInfos": [
+                                {
+                                    "fieldName": "NAME_LANG",
+                                    "label": "${common.name}"
+                                },
+                                {
+                                    "fieldName": "ADRESSE",
+                                    "label": "${common.address}"
+                                },
+                                {
+                                    "fieldName": "STADTBEZIR",
+                                    "label": "${common.precint}"
+                                },
+                                {
+                                    "fieldName": "POSTLEITZA",
+                                    "label": "${common.zip}"
+                                },
+                                {
+                                    "fieldName": "HYPERLINK",
+                                    "label": "${common.furtherinfo}"
+                                }
+                            ]
+                        }
+                    ]
+                }
+            }
+        ]
+    }
+}
 ```
 
 ## Development Guide
