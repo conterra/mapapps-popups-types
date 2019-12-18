@@ -23,6 +23,46 @@
                 "type": "",
                 "template": {}
             }
+        },
+        {
+            "name": "DomainPopupsFactory",
+            "properties": {
+                "popupTemplates": [
+                    {
+                        "type": "koeln",
+                        "template": {
+                            "title": "{NAME}",
+                            "content": [
+                                {
+                                    "type": "fields",
+                                    "fieldInfos": [
+                                        {
+                                            "fieldName": "NAME_LANG",
+                                            "label": "${common.name}"
+                                        },
+                                        {
+                                            "fieldName": "ADRESSE",
+                                            "label": "${common.address}"
+                                        },
+                                        {
+                                            "fieldName": "STADTBEZIR",
+                                            "label": "${common.precint}"
+                                        },
+                                        {
+                                            "fieldName": "POSTLEITZA",
+                                            "label": "${common.zip}"
+                                        },
+                                        {
+                                            "fieldName": "HYPERLINK",
+                                            "label": "${common.furtherinfo}"
+                                        }
+                                    ]
+                                }
+                            ]
+                        }
+                    }
+                ]
+            }
         }
     ]
 }

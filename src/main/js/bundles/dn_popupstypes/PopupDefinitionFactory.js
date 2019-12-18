@@ -13,21 +13,25 @@
  * See the License for the specific language governing permissions and
  * limitations under the License.
  */
-import registerSuite from "intern!object";
-import assert from "intern/chai!assert";
-import md from "module";
-import Hello from "../Hello";
+import PopupDefinition from "./PopupDefinition";
 
-let createHello = function (msg) {
-    let hello = new Hello();
-    hello._properties = {message: msg};
-    hello.activate();
-    return hello;
-};
+export default class PopupDefinitionFactory {
 
-registerSuite({
-    name: md.id,
-    "expect properties.message is returned by getMessage": function () {
-        assert.equal(createHello("hello world").getMessage(), "hello world");
+    constructor(args) {
+        this._type = args.type;
+        this._template = args.template;
     }
-});
+
+    getTypes() {
+        return [this._type];
+    }
+
+    createPopupDefinition(type) {
+        switch (type) {
+            case this._type:
+                return new PopupDefinition(this._template);
+            default:
+                throw new Error("unsupported type");
+        }
+    }
+}
