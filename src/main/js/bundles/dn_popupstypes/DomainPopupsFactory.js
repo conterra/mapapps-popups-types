@@ -15,10 +15,14 @@
  */
 import PopupDefinitionFactory from "./PopupDefinitionFactory";
 
+const _bundleContext = Symbol("_bundleContext");
+const _serviceRegistrations = Symbol("_serviceRegistrations");
+
 export default class DomainPopupsFactory {
 
     activate(componentContext) {
-        this._bundleContext = componentContext.getBundleContext();
+        this[_bundleContext] = componentContext.getBundleContext();
+        this[_serviceRegistrations] = [];
 
         const props = this._properties;
         props.popupTemplates.forEach((template) => {
@@ -27,20 +31,20 @@ export default class DomainPopupsFactory {
     }
 
     deactivate() {
-        const registration = this._serviceregistration;
-
+        const registrations = this[_serviceRegistrations];
+        registrations.forEach((registration) => {
+            if (registration) {
+                // call unregister
+                registration.unregister();
+            }
+        });
         // clear the reference
-        this._serviceregistration = null;
-
-        if (registration) {
-            // call unregister
-            registration.unregister();
-        }
+        this[_serviceRegistrations] = null;
     }
 
     registerPopupTemplate(props) {
         const template = new PopupDefinitionFactory(props);
         const interfaces = ["popups.PopupDefinitionFactory"];
-        this._serviceregistration = this._bundleContext.registerService(interfaces, template);
+        this[_serviceRegistrations].push(this[_bundleContext].registerService(interfaces, template));
     }
 }
