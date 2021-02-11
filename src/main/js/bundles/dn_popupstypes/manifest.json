@@ -4,6 +4,7 @@
     "title": "${bundleName}",
     "description": "${bundleDescription}",
     "vendor": "con terra GmbH",
+    "productName": "devnet-mapapps-popups-types",
     "keywords": [
         "popups"
     ],
