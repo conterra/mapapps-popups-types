@@ -9,7 +9,7 @@ The Popups Types bundle allows to configure popup templates in a central place a
 2. Then you need to configure your own popupTemplates in the Config component.
 3. After that you can use the popupTemplates inside the layer configuration:
 
-```json
+```javascript
 "layers": [
     {
         "title": "${map.koeln2.libraries.title}",
