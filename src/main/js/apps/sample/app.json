@@ -20,7 +20,6 @@
             "toolset",
             "banner",
             "basemaptoggler",
-            "custominfo",
             "viewmodeswitcher",
             "mapnavigation",
             "popups-default",
@@ -144,64 +143,6 @@
                 "imagePosition": "above",
                 "link": "http://developernetwork.conterra.de"
             }
-        },
-        "custominfo": {
-            "CustomInfoToggleTool": [
-                {
-                    "widgetSettings": {
-                        "content": "${custominfo.imprint.content}",
-                        "window": {
-                            "marginBox": {
-                                "w": 320,
-                                "h": 500
-                            },
-                            "draggable": true,
-                            "closable": true,
-                            "modal": true,
-                            "maximizable": false,
-                            "resizable": true,
-                            "title": "${custominfo.imprint.title}"
-                        }
-                    },
-                    "type": "IMPRINT",
-                    "toolClass": "ctInfo",
-                    "title": "${custominfo.imprint.title}",
-                    "tooltip": "${custominfo.imprint.tooltip}",
-                    "tooltipPositions": [
-                        "after",
-                        "above",
-                        "below",
-                        "before"
-                    ],
-                    "iconClass": "icon-custom-info-imprint",
-                    "togglable": true,
-                    "id": "IMPRINT_Imprint_CustomInfoTool"
-                },
-                {
-                    "widgetSettings": {
-                        "content": "${custominfo.imprint.content}",
-                        "window": {
-                            "marginBox": {
-                                "w": "100%",
-                                "h": "100%"
-                            },
-                            "draggable": false,
-                            "closable": true,
-                            "modal": true,
-                            "maximizable": false,
-                            "resizable": false,
-                            "title": "${custominfo.imprint.title}"
-                        }
-                    },
-                    "type": "IMPRINT",
-                    "toolClass": "ctInfo",
-                    "title": "${custominfo.imprint.title}",
-                    "tooltip": "${custominfo.imprint.tooltip}",
-                    "iconClass": "icon-custom-info-imprint",
-                    "togglable": true,
-                    "id": "IMPRINT_Imprint_CustomInfoTool_mobile"
-                }
-            ]
         },
         "map-init": {
             "Config": {
@@ -381,8 +322,7 @@
                             "zoomInTool",
                             "zoomOutTool",
                             "compassTool",
-                            "restoreInitialViewTool",
-                            "viewmodeSwitcherTool"
+                            "restoreInitialViewTool"
                         ],
                         "registerWidget": {
                             "widgetRole": "mapview_tools"
@@ -390,24 +330,6 @@
                         "container": "ignore",
                         "windowType": "container",
                         "cssClass": "muted"
-                    },
-                    {
-                        "id": "drawer_left",
-                        "title": "Werkzeuge",
-                        "cssClass": "ct-main-app-menu",
-                        "tools": [
-                            "tocToggleTool",
-                            "printingToggleTool",
-                            "sharelinkTool",
-                            "helloTool",
-                            "IMPRINT_Imprint_CustomInfoTool",
-                            "IMPRINT_Imprint_CustomInfoTool_mobile"
-                        ],
-                        "registerWidget": {
-                            "widgetRole": "drawer_button"
-                        },
-                        "container": "ignore",
-                        "windowType": "drawer_left"
                     }
                 ]
             }
