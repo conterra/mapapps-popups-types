@@ -17,9 +17,9 @@ export default function PopupDefinition(template) {
     return {
         resolvePopupTemplate(layerOrSublayer) {
             return template;
-        }
-        
-         resolvePopupTemplateForStore(store) {
+        },
+
+        resolvePopupTemplateForStore(store) {
             return template
         }
     };
