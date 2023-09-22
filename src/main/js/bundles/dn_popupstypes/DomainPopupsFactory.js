@@ -27,7 +27,7 @@ export default class DomainPopupsFactory {
         const props = this._properties;
         props.popupTemplates.forEach((template) => {
             this.registerPopupTemplate(template);
-        })
+        });
     }
 
     deactivate() {
