@@ -20,7 +20,7 @@ export default function PopupDefinition(template) {
         },
 
         resolvePopupTemplateForStore(store) {
-            return template
+            return template;
         }
     };
 }
