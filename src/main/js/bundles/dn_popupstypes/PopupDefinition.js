@@ -15,11 +15,11 @@
  */
 export default function PopupDefinition(template) {
     return {
-        resolvePopupTemplate(layerOrSublayer) {
+        resolvePopupTemplate() {
             return template;
         },
 
-        resolvePopupTemplateForStore(store) {
+        resolvePopupTemplateForStore() {
             return template;
         }
     };
