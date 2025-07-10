@@ -16,13 +16,6 @@
 module.exports = {
     root: {
         apptitle: "Popups Types Sample",
-        custominfo: {
-            imprint: {
-                title: "Imprint",
-                tooltip: "Show imprint",
-                content: "<p>This is a sample for an imprint.</p>"
-            }
-        },
         map: {
             koeln1: {
                 title: "Basic Data",
@@ -77,11 +70,15 @@ module.exports = {
                 }
             },
             basemaps: {
-                street: "Street Map (gray)",
-                street2: "Street Map",
+                gray: "Street Map (gray)",
+                streets: "Street Map",
                 topo: "Topographical Map",
                 hybrid: "Aerial (hybrid)"
             }
+        },
+        tools: {
+            drawerLeft: "Tools",
+            measuring: "Measuring Tools"
         },
         common: {
             number: "Number",
