@@ -8,8 +8,12 @@
     "keywords": [
         "popups"
     ],
+    "i18n": [
+        "bundle"
+    ],
+    "main": "",
     "dependencies": {
-        "popups": "^4.4.0"
+        "popups": "^4.20.0"
     },
     "components": [
         {
